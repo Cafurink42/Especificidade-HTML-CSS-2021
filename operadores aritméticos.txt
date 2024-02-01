@@ -1,0 +1,10 @@
+operadores aritméticos do js
+
++ adição
+- subtração
+* multiplicaçao
+/ divisao
+% módulo
+** exponenciação
+++ incremento
+-- decremento 

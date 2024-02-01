@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = '/javascript.js' type = 'text/javascript'></script>
+    <title>calculadora</title>
+    <style>
+        body{
+            font-family: sans-serif;
+
+        }
+        #calculator{
+            width:260px;
+            height: 50%;
+            background-color: rgb(121, 118, 118);
+            border-radius: 3%;
+            margin:30px auto;
+            display: grid;
+            margin: 15px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0.8);
+            grid-gap:25px;
+            grid-template-columns: [col1-start]  40px [col1-end col2-start]40px[col2-end col3-start]40px[col3-end col4-start]40px[col4-end col5-start]40px[col5-end 
+            col6-start]40px[col6-end];
+            grid-template-rows: [section_start1]50px[section_end1 section_start2]50px[section_end2 section_start3] 50px [section_end3 section_start4]50px
+            [section_end4 section_start5]50px[section_end5 section_start6]55px[section_end6];
+
+
+        }
+        #display{
+            border-top: 2px solid white;
+            border-left: 2px solid white;
+            background-color: rgb(190, 187, 187);
+            font-weight:bold;
+            width: 12px;
+            grid-column: col1-start/col6-end;
+            grid-row: section_start1/section_end1;
+            padding: 10px 0 0 245px;
+            margin: 10 auto;
+            height: 50px;
+
+        }
+        .ac{
+                width: 50px;
+                height: 50px;
+                grid-column: col1-start/col1-end;
+                grid-row: section_start2/section_end2;
+                font-weight:bold;
+         
+            }
+        .porcent{
+                width: 50px;
+                height: 50px;
+                grid-column: col2-start/col2-end;
+                grid-row: section_start2/section_end2;
+                font-weight:bold;
+            
+
+        }
+        .xis{
+            width: 50px;
+            height: 50px;
+            grid-column: col3-start/col2-end;
+            grid-row: section_start2/section_end2;
+            font-weight:bold;
+       
+
+            
+        }
+        .barra{
+            width: 50px;
+            height: 50px;
+            grid-column: col4-start/col4-end;
+            grid-row: section_start2/section_end2;
+            font-weight:bold;
+        
+
+        }
+        .seven{
+            width: 50px;
+            height: 50px;
+            grid-column: col1-start/col1-end;
+            grid-row: section_start3/section_end3;
+            font-weight:bold;
+      
+        }
+        .eight{
+            width: 50px;
+            height: 50px;
+            grid-row: section_start3/section_end3;
+            grid-column: col2-start/col2-end;
+            font-weight:bold;
+
+      
+        }
+        .nine{
+            width: 50px;
+            height: 50px;
+            grid-row: section_start3/section_end3;
+            grid-column: col3-start/col3-end;
+            font-weight:bold;
+         
+        }
+        .igual{
+            width:50px;
+            height: 50px;
+            grid-row:section_start3/section_end3;
+            grid-column: col4-start/col4-end;
+            font-weight:bold;
+     
+        }
+        .four{
+            width: 50px;
+            height:50px;
+            grid-row:section_start4/section_end4;
+            grid-column: col1-start/col1-end;
+            font-weight:bold;
+ 
+        }
+        .five{
+            width: 50px;
+            height: 50px;
+            grid-row: section_start4/section_end4;
+            grid-column: col2-start/col2-end;
+            font-weight:bold;
+     
+        }
+        .six{
+            width: 50px;
+            height: 50px;
+            grid-row:section_start4/section_end4;
+            grid-column: col3-start/col3-end;
+            font-weight:bold;
+
+        }
+        .minus{
+            width: 50px;
+            height: 50px;
+            grid-row: section_start4/section_end4;
+            grid-column: col4-start/col4-end;
+            font-weight:bold;
+
+        }
+        .one{
+            width: 50px;
+            height: 50px;
+            grid-row: section_start5/section_end5;
+            grid-column: col1-start/col1-end;
+            font-weight:bold;
+   
+        }
+        .two{
+            width: 50px;
+            height: 50px;
+            grid-row:section_start5/section_end5;
+            grid-column: col2-start/col2-end;
+            font-weight:bold;
+        }
+        .three{
+            width: 50px;
+            height: 50px;
+            grid-row: section_start5/section_end5;
+            grid-column: col3-start/col3-end;
+            font-weight:bold;
+
+        }
+
+        .plus{
+            background-color:rgb(163, 158, 158);
+            height: 130px;
+            width: 50px;
+            grid-row: section_start5/section_end6;
+            grid-column: col4-start/col4-end;
+            font-weight:bold;
+
+        }
+        .zero{
+            background-color:rgb(163, 158, 158);
+            width: 100px;
+            height: 50px;
+            grid-row: section_start6/section_end6;
+            grid-column: col1-start/col2-end;
+            font-weight:bold;
+
+        }
+        .virgula{
+            width: 50px;
+            height: 50px;
+            grid-row:section_start6/section_end6;
+            grid-column: col3-start/col3-end;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div id  = 'calculator'>
+        <div id  = 'display'>0</div>
+        <button class = 'ac'>AC</button> <button class = 'porcent'>%</button> <button class  ='xis'>x</button> <button class  = 'barra'>/</button>
+        <button class  = 'seven'>7</button> <button class = 'eight'>8</button> <button class = 'nine'>9</button> <button class= 'igual'>=</button>
+        <button class = 'four'>4</button> <button class  = 'five'>5</button> <button class = 'six'>6</button>  <button class ='minus' >-</button>
+        <button class = 'one' >1</button> <button class = 'two'>2</button> <button class  = 'three'>3</button>  <button class  = 'plus'>+</button>
+        <button class = 'zero'>0</button> <button class  = 'virgula'>,</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+operadores logicos js
+
+primeiro - ! Não (not)
+
+secundo - && e (and)
+
+terceiro - || ou (or) dois pypes

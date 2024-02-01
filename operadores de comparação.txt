@@ -1,0 +1,10 @@
+operadores de comparação 
+
+== igualdade (valor)
+!= diferente (valor)
+=== igualdade (valor e tipo)
+!== diferente (valor e tipo)
+> maior que
+>= maior ou igual 
+< menor que
+<= menor ou igual

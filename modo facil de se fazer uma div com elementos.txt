@@ -1,0 +1,3 @@
+modo mais fácil de se fazer uma div e acrescentar paragrafos
+
+div#jumbotron>h2{subtitulo}+p{paragrafos}*2

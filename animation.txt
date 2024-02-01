@@ -1,0 +1,5 @@
+transition: property duration timing-function delay
+
+
+shorthand - colocar todos os valores na propriedade transiton 
+propridade will-change para prepapar para animar algum elemento

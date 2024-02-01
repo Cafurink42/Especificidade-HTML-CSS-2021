@@ -1,0 +1,18 @@
+semântica e css
+
+
+-cite 
+-blockquote
+-address
+-code
+-figure e figcapiton --serve para a gente criar remover do conteudo principal
+
+
+
+outras tags
+
+-abbr
+-time
+-del
+-ins
+-kbd
